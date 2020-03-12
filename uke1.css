@@ -2,6 +2,11 @@
 {
     
 }
+div{
+    background-color:aqua;
+    border: 3px solid black;
+    padding: 5px;
+}
 allGrid{
     display:grid;
 

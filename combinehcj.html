@@ -9,17 +9,60 @@
 </head>
 <body>
     <div id="picInfo">Lit text</div>
-    <p id="eventInfo"></p>    
+    <p id="eventInfo"></p>
+    Skriv något: <input type="text" id="ord" onchange="wOrd()">
+    
+    <p ondblclick="clicka2()">Klicka 2 gånger</p>
+    <p id="2result"></p>
+
+    <div oncontextmenu="menyTest()" contextmenu="minMeny">
+        <p>Høger clicka</p>
+    </div>
+     Skriv något hær: <input type="text" onkeydown="knapptryckt()">
+
+    <menu type="context" id="minMeny">
+        <menuitem label="Refresh" onclick="window.location.reload"; icon="pic1.jpg"></menuitem>        
+    </menu>
+
+    <h2 onclick="gorNagot(this)">klicka här</h2>
+    <h2 onclick="gorNagot(this)">eller här</h2>
+
+    <table><tr><td onmouseover="changeStuff(this)">o</td><td onmouseover="changeStuff(this)">o</td><td onmouseover="changeStuff(this)">o</td></tr>
+           <tr><td onmouseover="changeStuff(this)">o</td><td onmouseover="changeStuff(this)">o</td><td onmouseover="changeStuff(this)">o</td></tr>
+           <tr><td onmouseover="changeStuff(this)">o</td><td onmouseover="changeStuff(this)">o</td><td onmouseover="changeStuff(this)">o</td></tr></table>
+
+    <button onclick="tell()">Tell!</button>
+    <div id="info">TRYKK!!!</div>
+    
+    <script>
+        var tText = "Dette er da ikke et bilde";
+        document.getElementById("picInfo").onmouseover = moverE;
+        document.getElementById("eventInfo").onclick = changeText;
+        function changeText() {
+            document.getElementById("picInfo").innerHTML = "dette er heller ikke et bilde";
+        }
+        function moverE() {
+            document.getElementById("eventInfo").innerHTML = tText;
+        }
+        function wOrd() {
+            var x = document.getElementById("ord");
+            x.value = x.value.toUpperCase();
+        }
+        function clicka2() {
+            console.log("nu klicka du mycket");
+        }
+        function menyTest() {
+            console.log("FOOL");
+        }
+        function knapptryckt() {            
+            console.log("Sluta tryck ");
+        }
+        function gorNagot(harKlickasDet) {
+            harKlickasDet.innerHTML = 'Nu vart det fel';
+        }
+        function changeStuff(nyttVarde) {
+           nyttVarde.innerHTML = 'x';                     
+        }
+    </script>
 </body>
-<script>
-    var tText = "Dette er da ikke et bilde";
-    document.getElementById("picInfo").onmouseover = moverE;
-    document.getElementById("eventInfo").onclick = changeText;
-    function changeText(){
-        document.getElementById("picInfo").innerHTML = "dette er heller ikke et bilde";
-    }
-    function moverE() {
-        document.getElementById("eventInfo").innerHTML = tText;
-    }
-</script>
 </html>

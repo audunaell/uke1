@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>uke1 combine things</title>
+
+    <link rel="stylesheet" href="uke1.css">
+</head>
+<body>
+    <div id="picInfo">Lit text</div>
+    <p id="eventInfo"></p>    
+</body>
+<script>
+    var tText = "Dette er da ikke et bilde";
+    document.getElementById("picInfo").onmouseover = moverE;
+    document.getElementById("eventInfo").onclick = changeText;
+    function changeText(){
+        document.getElementById("picInfo").innerHTML = "dette er heller ikke et bilde";
+    }
+    function moverE() {
+        document.getElementById("eventInfo").innerHTML = tText;
+    }
+</script>
+</html>

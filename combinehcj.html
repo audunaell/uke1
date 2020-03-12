@@ -27,9 +27,9 @@
     <h2 onclick="gorNagot(this)">klicka här</h2>
     <h2 onclick="gorNagot(this)">eller här</h2>
 
-    <table><tr><td onmouseover="changeStuff(this)">o</td><td onmouseover="changeStuff(this)">o</td><td onmouseover="changeStuff(this)">o</td></tr>
-           <tr><td onmouseover="changeStuff(this)">o</td><td onmouseover="changeStuff(this)">o</td><td onmouseover="changeStuff(this)">o</td></tr>
-           <tr><td onmouseover="changeStuff(this)">o</td><td onmouseover="changeStuff(this)">o</td><td onmouseover="changeStuff(this)">o</td></tr></table>
+    <table><tr><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td></tr>
+           <tr><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td></tr>
+           <tr><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td></tr></table>
 
     <button onclick="tell()">Tell!</button>
     <div id="info">TRYKK!!!</div>
@@ -62,6 +62,9 @@
         }
         function changeStuff(nyttVarde) {
            nyttVarde.innerHTML = 'x';                     
+        }
+        function changeback(oldValue) {
+            oldValue.innerHTML = 'o';
         }
     </script>
 </body>
